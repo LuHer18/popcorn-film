@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
-import { useNavigate, } from 'react-router-dom'
+import { useNavigate, useLocation } from 'react-router-dom'
 import { MagnifyingGlassIcon } from '@heroicons/react/24/solid'
 import { XMarkIcon } from '@heroicons/react/24/solid'
+
 
 
 export const Search = ({ setSearchKey }) => {
@@ -10,6 +11,7 @@ export const Search = ({ setSearchKey }) => {
   const onChangeValue = (e) => {
     setValue(e.target.value)
   }
+  const location = useLocation();
   const onSubmit = (e) => {
     e.preventDefault()
     setSearchKey(value)
@@ -18,7 +20,7 @@ export const Search = ({ setSearchKey }) => {
   }
   const onReset = () => {
     setValue('')
-    navigate(-1)
+    if(location.pathname==='/search')navigate(-1)
   }
   
 

@@ -1,11 +1,11 @@
 import React, { useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { ViewContext } from '../../context/ViewContext'
-export const CardInfo = ({ title, post, id, overview}) => {
+export const CardInfo = ({ title, post, id, overview, type}) => {
   const navigate = useNavigate()
   const {handleContent} = useContext(ViewContext)
   const onClick = () => {
-    handleContent(id, title, post, overview)
+    handleContent(id, title, post, overview, type)
     navigate(`/contenido/${id}`)
   }
   return (

@@ -6,13 +6,13 @@ export const ResultSeries = ({tvSeriesSearch,resultSeriesSearch}) => {
     <>
     {
             (resultSeriesSearch===0)&&(
-                <p>No se han encontrado resultados de tu busqueda</p>
+                <p>No se han encontrado resultados de tu búsqueda</p>
             )
         }
     <ul className='flex justify-center mx-2 w-full gap-2 flex-wrap' >
     {
       tvSeriesSearch.map(tvSerieSearch => (
-        <CardSearch key={tvSerieSearch.id} title={tvSerieSearch.name} id={tvSerieSearch.id} overview ={tvSerieSearch.overview} image={tvSerieSearch.poster_path} />
+        <CardSearch key={tvSerieSearch.id} title={tvSerieSearch.name} id={tvSerieSearch.id} type={'tv'} overview ={tvSerieSearch.overview} image={tvSerieSearch.poster_path} />
       ))
     }
   </ul>

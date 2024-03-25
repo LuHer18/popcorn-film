@@ -12,7 +12,7 @@ export const Peliculas = () => {
         <ul className='flex justify-center mx-2 w-full gap-2 flex-wrap'>
           {
             movies.map(movie => (
-              <Card key={movie.id} title={movie.title} id={movie.id} overview={movie.overview} image={movie.poster_path} />
+              <Card key={movie.id} title={movie.title} id={movie.id} overview={movie.overview} type={'movie'} image={movie.poster_path} />
             ))
           }
         </ul>
