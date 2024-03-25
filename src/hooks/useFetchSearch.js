@@ -1,9 +1,8 @@
 import { useState, useEffect } from 'react'
-const URL_API = 'https://api.themoviedb.org/3/'
-const API_KEY = '36830da011d1cdf91017bdae4792eab3'
+const URL_API = import.meta.env.VITE_URL_API
+const API_KEY = import.meta.env.VITE_API_KEY
 
 export const useFetchSearch = () => {
-/*     const [moviesSearch, setMoviesSearch] = useState([]) */
     const [searchKey, setSearchKey] = useState('')
     const [dataSearch, setDataSearch] = useState({
         moviesSearch: [],
@@ -11,7 +10,6 @@ export const useFetchSearch = () => {
         isLoading: true,
         error: null
     });
-    /* console.log(dataSearch.moviesSearch) */
 
     const urlMovieSearch = `${URL_API}/search/movie?query=${searchKey}&api_key=${API_KEY}`
     const urlTvSeriesSearch = `${URL_API}/search/tv?query=${searchKey}&api_key=${API_KEY}` 

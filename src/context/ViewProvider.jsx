@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { ViewContext } from './ViewContext'
 
-const URL_API = 'https://api.themoviedb.org/3/'
-const API_KEY = '36830da011d1cdf91017bdae4792eab3'
+const URL_API = import.meta.env.VITE_URL_API
+const API_KEY = import.meta.env.VITE_API_KEY
 
 
 export const ViewProvider = ({children}) => {
@@ -18,7 +18,6 @@ export const ViewProvider = ({children}) => {
         isLoading: true,
         error: null
     })
-   
     const urlVideo = `${URL_API}/${content.type}/${content.id}/videos?api_key=${API_KEY}`
 
     useEffect(() => {

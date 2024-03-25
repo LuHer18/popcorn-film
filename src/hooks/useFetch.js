@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 
-const URL_API = 'https://api.themoviedb.org/3/'
-const API_KEY = '36830da011d1cdf91017bdae4792eab3'
+const URL_API = import.meta.env.VITE_URL_API
+const API_KEY = import.meta.env.VITE_API_KEY
 
 const urlMovie = `${URL_API}/discover/movie?api_key=${API_KEY}`
 const urlTv = `${URL_API}/discover/tv?api_key=${API_KEY}`

@@ -1,9 +1,9 @@
 import React from 'react'
 import YouTube from 'react-youtube';
 import { XMarkIcon } from '@heroicons/react/24/solid'
-export const CardVideo = ({ videos, close }) => {
+export const CardVideo = ({ videos, close,  }) => {
     return (
-        <div className='display flex items-start md:justify-center mt-2'>
+        <div className='flex items-start md:justify-center mt-2 w-[300px] h-[190px] md:w-[640px] md:h-[390px]'>
             {
                 (videos !== undefined) ?
                     <>  

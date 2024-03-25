@@ -24,8 +24,8 @@ export const Contenido = () => {
     <Layout>
       <div className='flex flex-col w-full'>
         <button onClick={() => navigate(-1)} className='flex m-2 w-10 h-10 pb-0 justify-center items-center rounded-full hover:bg-slate-600'><ArrowUturnLeftIcon className='w-6 h-6' /></button>
-        <section className='w-full h-[790px] bg-cover bg-no-repeat bg-center' style={{ backgroundImage: `url(${content.post}` }}>
-          <div className='flex bg-gradient-to-l w-full flex-col md:flex-row from-transparent to-slate-700 to-70%  justify-center h-[790px] p-10  md:items-start items-center gap-2 md:gap-0'>
+        <section className='w-full h-[790px] md:h-[670px] bg-cover bg-no-repeat bg-center' style={{ backgroundImage: `url(${content.post}` }}>
+          <div className='flex bg-gradient-to-l w-full flex-col md:flex-row from-transparent to-slate-700 to-70%  justify-center h-[790px] md:h-[670px] p-10  md:items-start items-center gap-2 md:gap-0'>
             <figure className=' h-[264px] w-44 sm:h-[390px] sm:w-[250px] flex items-center'>
               <img className=' h-full w-full rounded-md' src={content.post} alt={content.title} />
             </figure>
@@ -40,7 +40,7 @@ export const Contenido = () => {
               {
                 isPlaying? 
                   <CardVideo videos={videos} close={close} />:
-                  <div className='w-[300px] h-[180px] md:w-[640px] md:h-[390px] '></div>
+                  <div className='w-[300px] h-[190px] md:w-[640px] mt-2 md:h-[390px] '></div>
                 
               }
                 </div>
